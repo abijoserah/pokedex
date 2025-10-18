@@ -1,4 +1,13 @@
-export function PokemonCard({ pokemon }) {
+type Pokemon = {
+	name: string;
+	imgSrc?: string;
+};
+
+type PokemonCardProps = {
+	pokemon: Pokemon;
+};
+
+export function PokemonCard({ pokemon }: PokemonCardProps) {
 	return (
 		<figure>
 			{pokemon.imgSrc ? (
